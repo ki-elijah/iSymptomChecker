@@ -187,7 +187,7 @@ st.title(translations[lang_code]["title"])
 # Input method selection
 input_method = st.radio(
     translations[lang_code]["input_method"],
-    [translations[lang_code]["voice"], translations[lang_code]["manual"]]
+    [translations[lang_code]["Manual"], translations[lang_code]["manual"]]
 )
 
 # Symptom collection
