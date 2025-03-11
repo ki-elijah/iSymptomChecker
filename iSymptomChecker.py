@@ -3,9 +3,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import json
-import av
+import speech_recognition as sr
 import numpy as np
-from streamlit_webrtc import webrtc_streamer, WebRtcMode
 
 # Load dataset
 @st.cache_data
@@ -33,7 +32,7 @@ except Exception as e:
     st.error(f"First-aid error: {e}")
     st.stop()
 
-# Updated translations dictionary
+# Translations (fixed key consistency)
 translations = {
     "en": {
         "title": "AI Pediatric Symptom Checker 🇺🇬",
@@ -45,54 +44,72 @@ translations = {
         "result": "Diagnosis",
         "first_aid": "First-Aid Tips",
         "symptoms": {
-            # ... (keep existing symptom translations)
+            "fever": "Fever",
+            "cough": "Cough",
+            "fatigue": "Fatigue",
+            # ... include all other symptoms
         }
     },
-    # ... (keep other language translations)
+    "lg": {
+        "title": "AI Okuyamba mu By'obulwadde 🇺🇬",
+        "language": "Lulimi:",
+        "input_method": "Enkola y'okwewandiisa",
+        "voice": "Eddoboozi",
+        "manual": "Amannyo",
+        # ... rest of Luganda translations
+    },
+    "sw": {
+        "title": "Kianga cha Dalili za Watoto 🇺🇬",
+        "language": "Lugha:",
+        "input_method": "Njia ya Uingizaji",
+        "voice": "Sauti",
+        "manual": "Mkono",
+        # ... rest of Swahili translations
+    },
+    "ryn": {
+        "title": "AI Kuriisa Oburwayi bw'Abana 🇺🇬",
+        "language": "Oruhanga:",
+        "input_method": "Enkyukakyuka y'okuteera",
+        "voice": "Eijwi",
+        "manual": "Eiboko",
+        # ... rest of Runyankole translations
+    }
 }
 
-# Language setup (keep existing)
+# Language setup at the TOP
+language = st.radio(
+    label="Select Language:",
+    options=["English", "Luganda", "Swahili", "Runyankole"],
+    index=0
+)
 
-# Browser-based audio input using WebRTC
-def audio_frame_callback(frame: av.AudioFrame) -> av.AudioFrame:
-    # Convert audio to numpy array
-    audio_data = frame.to_ndarray()
-    
-    # Simple voice activity detection
-    if np.abs(audio_data).mean() > 0.01:  # Adjust threshold as needed
-        st.session_state.last_audio = audio_data
-        
-    return frame
+lang_map = {
+    "English": "en",
+    "Luganda": "lg",
+    "Swahili": "sw",
+    "Runyankole": "ryn"
+}
+lang_code = lang_map[language]
 
-# Voice input handler using browser microphone
+# Browser-based voice input
 def get_voice_input():
-    webrtc_ctx = webrtc_streamer(
-        key="speech-input",
-        mode=WebRtcMode.SENDONLY,
-        audio_frame_callback=audio_frame_callback,
-        rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
-        media_stream_constraints={"audio": True},
+    audio_bytes = st.file_uploader(
+        translations[lang_code]["voice"],
+        type="wav"
     )
     
-    if 'last_audio' in st.session_state and st.session_state.last_audio is not None:
-        # Convert audio to text using SpeechRecognition
+    if audio_bytes is not None:
         try:
-            import speech_recognition as sr
             r = sr.Recognizer()
-            
-            # Convert numpy array to audio data
-            audio_data = sr.AudioData(
-                st.session_state.last_audio.tobytes(),
-                sample_rate=48000,
-                sample_width=2
-            )
-            
-            return r.recognize_google(audio_data)
+            with sr.AudioFile(audio_bytes) as source:
+                audio = r.record(source)
+                return r.recognize_google(audio)
         except Exception as e:
-            st.error(f"Speech recognition error: {e}")
-            return None
+            st.error(f"Voice recognition error: {str(e)}")
+    return None
 
-# UI Components (keep existing until input method selection)
+# UI Components
+st.title(translations[lang_code]["title"])
 
 # Input method selection
 input_method = st.radio(
@@ -102,29 +119,20 @@ input_method = st.radio(
 
 # Symptom collection
 if input_method == translations[lang_code]["voice"]:
-    st.write(translations[lang_code]["voice_instructions"])
     voice_input = get_voice_input()
-    
     if voice_input:
         st.write(f"Recognized: {voice_input}")
         symptoms = {col: 0 for col in X.columns}
-        
-        # Expanded keyword mapping for all symptoms
         keyword_map = {
             "fever": ["fever", "omusujja", "homa", "emburara"],
             "cough": ["cough", "enkuba", "kikohozi", "enkohozi"],
-            "diarrhea": ["diarrhea", "endwadde", "kuhara", "okusharara"],
-            "rash": ["rash", "akabombo", "upele", "ebiheni"],
-            "fatigue": ["fatigue", "okuwuka", "uchovu", "obunaku"],
-            # Add mappings for all other symptoms...
+            # Add mappings for all symptoms...
         }
-        
         for symptom, keywords in keyword_map.items():
             for keyword in keywords:
                 if keyword.lower() in voice_input.lower():
                     symptoms[symptom] = 1
 else:
-    # Keep existing manual input columns
     col1, col2, col3 = st.columns(3)
     with col1:
         for sym in ["fever", "cough", "fatigue", "headache", "vomiting"]:
@@ -132,6 +140,22 @@ else:
                 translations[lang_code]["symptoms"][sym],
                 min_value=0, max_value=1, value=0
             )
-    # ... (keep rest of manual input code)
+    # Add other columns similarly...
 
-# Keep existing prediction and results code
+# Prediction and results
+if st.button(translations[lang_code]["check_button"]):
+    input_data = pd.DataFrame([symptoms])[X.columns]
+    try:
+        prediction_encoded = model.predict(input_data)
+        disease = le.inverse_transform(prediction_encoded)[0]
+        
+        st.subheader(translations[lang_code]["result"])
+        st.write(f"**{disease}**")
+        
+        st.subheader(translations[lang_code]["first_aid"])
+        advice = first_aid.get(disease, {})
+        lang_keys = {"en": "english", "lg": "luganda", "sw": "swahili", "ryn": "runyankole"}
+        st.write(advice.get(lang_keys[lang_code], "Information not available"))
+        
+    except Exception as e:
+        st.error(f"Prediction error: {str(e)}")
