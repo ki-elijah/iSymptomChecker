@@ -1,0 +1,122 @@
+{
+    "Malaria": {
+        "english": "1. Use antimalarial medication. 2. Keep the child hydrated. 3. Seek healthcare immediately if symptoms worsen.",
+        "luganda": "1. Kozesa eddagala erirwana ne malaria. 2. Muwale omwana amazzi. 3. Noonya omusawo mangu bwe mbala zikula.",
+        "swahili": "1. Tumia dawa ya malaria. 2. Mwenye mtoto maji. 3. Tafuta msaada wa kimatibabu haraka.",
+        "runyankole": "1. Koresha edagala ry'okurwana malaria. 2. Heesa omwana amazi. 3. Ronda omushaho mangu."
+    },
+    "Measles": {
+        "english": "1. Ensure vaccination. 2. Provide vitamin A. 3. Isolate to prevent spread.",
+        "luganda": "1. Kakasa eddagala. 2. Muwale vitamin A. 3. Mwawale omwana mu kifo ekimu.",
+        "swahili": "1. Hakikisha chanjo. 2. Toa vitamini A. 3. Tenga mtoto pekee.",
+        "runyankole": "1. Kakasa obujwa. 2. Heesa vitamini A. 3. Tema omwana kumwe."
+    },
+    "Cholera": {
+        "english": "1. Use oral rehydration solution (ORS). 2. Seek emergency medical care.",
+        "luganda": "1. Kozesa amazzi aga ORS. 2. Noonya omusawo mangu.",
+        "swahili": "1. Tumia ORS. 2. Tafuta matibabu ya haraka.",
+        "runyankole": "1. Koresha ORS. 2. Shanga omushaho mangu."
+    },
+    "Pneumonia": {
+        "english": "1. Administer antibiotics. 2. Ensure adequate rest.",
+        "luganda": "1. Muwale eddagala erirwana ne pneumonia. 2. Muwale omwana alambee.",
+        "swahili": "1. Toa antibiotiki. 2. Hakikisha mtoto anapumzika.",
+        "runyankole": "1. Heesa edagala ry'okurwana pneumonia. 2. Heesa omwana okuryama."
+    },
+    "Malnutrition": {
+        "english": "1. Provide nutrient-rich foods (eggs, beans). 2. Consult a nutritionist.",
+        "luganda": "1. Muwale emmere enkaluubirizza (amagi, ebijanjaalo). 2. Kubaana ne muganga w'emmere.",
+        "swahili": "1. Toa chakula chenye virutubisho (mayai, maharagwe). 2. Shauriana na mtaalamu wa lishe.",
+        "runyankole": "1. Heesa emmere enkuruubiriza (amagi, ebihimba). 2. Kuraana omwetezi w'emmere."
+    },
+    "Typhoid": {
+        "english": "1. Use antibiotics. 2. Maintain strict hygiene.",
+        "luganda": "1. Kozesa eddagala erirwana ne typhoid. 2. Tereka obulungi.",
+        "swahili": "1. Tumia antibiotiki. 2. Shika usafi mkali.",
+        "runyankole": "1. Koresha edagala ry'okurwana typhoid. 2. Tunga obwokure."
+    },
+    "Cerebral Malaria": {
+        "english": "1. EMERGENCY - Seek hospital care immediately.",
+        "luganda": "1. OKUSANGA OMUSAWO MANGU - Twale omwana mu ddwaliro mangu.",
+        "swahili": "1. Dharura - Peleka hospitalini haraka.",
+        "runyankole": "1. OBUYAMBI BWA MAIRE - Tora omwana mu ddwaliro mangu."
+    },
+    "Meningitis": {
+        "english": "1. EMERGENCY - Hospitalization required immediately.",
+        "luganda": "1. OKUSANGA OMUSAWO MANGU - Twale omwana mu ddwaliro.",
+        "swahili": "1. Dharura - Hitaji la kuhudhuriwa hospitalini.",
+        "runyankole": "1. OBUYAMBI BWA MAIRE - Tora omwana mu ddwaliro."
+    },
+    "Intestinal Worms": {
+        "english": "1. Administer deworming medication (e.g., albendazole).",
+        "luganda": "1. Muwale eddagala erirwana n'ebisiri (albendazole).",
+        "swahili": "1. Toa dawa ya minyoo (k.m. albendazole).",
+        "runyankole": "1. Heesa edagala ry'okurwana n'ebisiri (albendazole)."
+    },
+    "Hepatitis B": {
+        "english": "1. Provide liver-friendly diet. 2. Ensure vaccination.",
+        "luganda": "1. Muwale emmere ennungi. 2. Kakasa eddagala.",
+        "swahili": "1. Toa chakula cha ini. 2. Hakikisha chanjo.",
+        "runyankole": "1. Heesa emmere ennungi. 2. Kakasa obujwa."
+    },
+    "Sepsis": {
+        "english": "1. EMERGENCY - Intravenous antibiotics required urgently.",
+        "luganda": "1. OKUSANGA OMUSAWO MANGU - Eddagala ery'omubiri gye liryetaagisa.",
+        "swahili": "1. Dharura - Antibiotiki za mshipa zinahitajika.",
+        "runyankole": "1. OBUYAMBI BWA MAIRE - Edagala ry'omubiri rikyetaagisa."
+    },
+    "Scabies": {
+        "english": "1. Apply permethrin cream. 2. Wash bedding in hot water.",
+        "luganda": "1. Kozesa amafuta agalumba scabies. 2. Fuula ebifaananyi by'omuliro.",
+        "swahili": "1. Paka kremi ya permethrin. 2. Osha vitanda kwa maji moto.",
+        "runyankole": "1. Koresha amafuta ga scabies. 2. Hara ebikoresho mu maizi omuriro."
+    },
+    "Anemia": {
+        "english": "1. Provide iron supplements. 2. Increase leafy green vegetables.",
+        "luganda": "1. Muwale eddagala ery'ekyuma. 2. Yonja emmere ennungi.",
+        "swahili": "1. Toa vidonge vya chuma. 2. Ongeza mboga za kijani.",
+        "runyankole": "1. Heesa edagala ry'ekyoma. 2. Heesa ebibala by'ebinyansi."
+    },
+    "Rheumatic Fever": {
+        "english": "1. Administer antibiotics. 2. Use anti-inflammatory drugs.",
+        "luganda": "1. Muwale eddagala erirwana ne rheumatic fever. 2. Kozesa eddagala erirwaza.",
+        "swahili": "1. Toa antibiotiki. 2. Tumia dawa za kupunguza uvimbe.",
+        "runyankole": "1. Heesa edagala ry'okurwana rheumatic fever. 2. Koresha edagala ry'okurwaza."
+    },
+    "Tuberculosis": {
+        "english": "1. TB antibiotic regimen. 2. Isolate the patient.",
+        "luganda": "1. Ddagala erirwana ne TB. 2. Mwawale omulwadde.",
+        "swahili": "1. Mpangilio wa antibiotiki za kifua kikuu. 2. Tenga mgonjwa pekee.",
+        "runyankole": "1. Edagala ry'okurwana TB. 2. Tema omulwara kumwe."
+    },
+    "Rotavirus": {
+        "english": "1. Oral rehydration. 2. Zinc supplements.",
+        "luganda": "1. Muwale amazzi aga ORS. 2. Muwale zinc.",
+        "swahili": "1. Mwenye maji mwilini. 2. Toa zinki.",
+        "runyankole": "1. Heesa ORS. 2. Heesa zinc."
+    },
+    "Kwashiorkor": {
+        "english": "1. High-protein diet. 2. Gradual refeeding.",
+        "luganda": "1. Emmere eya protein. 2. Muwale bulungi.",
+        "swahili": "1. Chakula chenye protini nyingi. 2. Mlisho taratibu.",
+        "runyankole": "1. Emmere eya protein. 2. Heesa bulungi."
+    },
+    "Schistosomiasis": {
+        "english": "1. Praziquantel medication. 2. Avoid contaminated water.",
+        "luganda": "1. Kozesa praziquantel. 2. Weewale amazzi amalala.",
+        "swahili": "1. Tumia praziquantel. 2. Epuka maji machafu.",
+        "runyankole": "1. Koresha praziquantel. 2. Ega amazi amafu."
+    },
+    "HIV/AIDS (Advanced)": {
+        "english": "1. Antiretroviral therapy. 2. Nutritional support.",
+        "luganda": "1. Kozesa ARVs. 2. Muwale emmere ennungi.",
+        "swahili": "1. Tangu na ARV. 2. Msaada wa lishe.",
+        "runyankole": "1. Koresha ARVs. 2. Heesa emmere ennungi."
+    },
+    "River Blindness": {
+        "english": "1. Ivermectin treatment. 2. Prevent reinfection.",
+        "luganda": "1. Kozesa ivermectin. 2. Weewale ebitundu.",
+        "swahili": "1. Tumia ivermectin. 2. Zuia maambukizo tena.",
+        "runyankole": "1. Koresha ivermectin. 2. Ega okurwarwa obundi."
+    }
+}

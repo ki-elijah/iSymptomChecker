@@ -1,0 +1,21 @@
+fever,cough,fatigue,headache,vomiting,diarrhea,rash,difficulty_breathing,swollen_lymph_nodes,loss_of_appetite,abdominal_pain,chills,convulsions,dehydration,pale_gums,jaundice,joint_pain,itching,malnutrition,disease
+1,1,1,1,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,Malaria
+1,1,1,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,Measles
+0,1,0,0,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,Cholera
+1,1,1,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,Pneumonia
+0,0,1,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,1,Malnutrition
+1,0,1,1,1,1,0,0,0,1,1,1,0,1,0,1,0,0,0,Typhoid
+1,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,Cerebral Malaria
+1,1,1,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,Meningitis
+0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,Intestinal Worms
+1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,Hepatitis B
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Sepsis
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,Scabies
+0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,Anemia
+1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,Rheumatic Fever
+1,1,1,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,Tuberculosis
+1,0,0,0,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,Rotavirus
+0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,Kwashiorkor
+1,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,Schistosomiasis
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,HIV/AIDS (Advanced)
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,River Blindness
